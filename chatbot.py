@@ -11,7 +11,7 @@ load_dotenv()
 
 groq_api_key = st.secrets["GROQ_API_KEY"]
 
-model= ChatGroq(temperature=0, model_name="openai/gpt-oss-20b")
+model= ChatGroq(temperature=0, model_name="openai/gpt-oss-20b",max_tokens=500)
 
 
 st.title("Vinu Chatbot")
