@@ -1,0 +1,35 @@
+camera:
+  index: 0
+  width: 1280
+  height: 720
+  fps: 30
+
+models:
+  vehicle: models/vehicle_yolo.pt
+  plate: models/indian_plate.pt
+
+ocr:
+  backend: paddleocr
+  interval: 5
+  min_confidence: 0.60
+  min_plate_area: 1200
+
+tracking:
+  enabled: true
+  tracker: bytetrack.yaml
+  track_timeout_seconds: 5.0
+  min_consecutive_votes: 3
+
+performance:
+  display_fps: 30
+  detection_interval: 3
+
+plate_cooldown: 8.0
+
+database:
+  path: data/anpr.db
+
+snapshots:
+  enabled: true
+  directory: data/snapshots
+  save_all_detections: false
